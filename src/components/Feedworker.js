@@ -22,7 +22,7 @@ constructor(props) {
 }
 componentDidMount(){
 if(this.state.label == 'all'){
-  fetch('http://127.0.0.1:5000/feed/'+this.state.label)
+  fetch('https://backendnewbytes.azurewebsites.net/feed/'+this.state.label)
   .then((res) => res.json())
   .then((json) => {
       this.setState({data:json,loaded:true})
@@ -56,7 +56,7 @@ componentDidUpdate(prevProps) {
       })
     }
     else{
-      fetch('http://127.0.0.1:5000/feed?label='+this.props.label)
+      fetch('https://backendnewbytes.azurewebsites.net/feed?label='+this.props.label)
       .then((res) => res.json())
       .then((json) => {
           this.setState({data:json,loaded:true})
