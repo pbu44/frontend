@@ -32,7 +32,7 @@ if(this.state.label == 'all'){
   })
 }
 else{
-  fetch('https://backendnewbytes.azurewebsites.net/feed?label='+this.state.label)
+  fetch('https://backendnewbytes.azurewebsites.net/feed/?label='+this.state.label)
   .then((res) => res.json())
   .then((json) => {
       this.setState({data:json,loaded:true})
@@ -56,7 +56,7 @@ componentDidUpdate(prevProps) {
       })
     }
     else{
-      fetch('https://backendnewbytes.azurewebsites.net/feed?label='+this.props.label)
+      fetch('https://backendnewbytes.azurewebsites.net/feed/?label='+this.props.label)
       .then((res) => res.json())
       .then((json) => {
           this.setState({data:json,loaded:true})
