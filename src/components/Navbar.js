@@ -81,8 +81,8 @@ render(){
         component="main"
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
       >
-        <Toolbar > <User/> </Toolbar>
-      <Feedworker label={this.state.label} ></Feedworker>
+        <Toolbar > <User label={this.state.label}></User> </Toolbar>
+      
       </Box>
     </Box>
     </div>
